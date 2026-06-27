@@ -140,13 +140,21 @@ http://localhost:8080/v3/api-docs
 
 ## Screenshots
 
-| Swagger UI Overview | Auth Endpoints |
+| Swagger UI Overview |
 |---|---|
-| ![Swagger UI overview](screenshots/swagger-overview.png) | ![Auth endpoints](screenshots/swagger-auth.png) |
+| ![Swagger UI overview](screenshots/swagger-overview.png) |
 
-| Orders Endpoint Detail | Sample Response |
+| Registration Overview |
 |---|---|
-| ![Orders endpoint](screenshots/swagger-orders.png) | ![Sample response](screenshots/sample-response.png) |
+| ![Registration](screenshots/registration.png) |
+
+| Login Overview |
+|---|---|
+| ![Swagger UI overview](screenshots/login.png) |
+
+| Product |
+|---|---|
+| ![Product](screenshots/product.png) |
 
 > Place screenshot images in a `screenshots/` folder at the project root, matching the filenames above (or update the paths to match your own filenames).
 
