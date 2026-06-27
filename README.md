@@ -136,27 +136,25 @@ Raw OpenAPI spec:
 http://localhost:8080/v3/api-docs
 ```
 
-> To test protected endpoints directly from Swagger, click **Authorize** at the top of the page and paste in a JWT token obtained from `/auth/login`.
 
 ## Screenshots
 
 | Swagger UI Overview |
-|---|---|
-| ![Swagger UI overview](screenshots/swagger-overview.png) |
+|---|
+| ![Swagger UI overview](screenshots/swagger_overview.png) |
 
 | Registration Overview |
-|---|---|
-| ![Registration](screenshots/registration.png) |
+|---|
+| ![Registration](screenshots/registration-pic.png) |
 
 | Login Overview |
-|---|---|
-| ![Swagger UI overview](screenshots/login.png) |
+|---|
+| ![Swagger UI overview](screenshots/login-pic.png) |
 
 | Product |
-|---|---|
-| ![Product](screenshots/product.png) |
+|---|
+| ![Product](screenshots/product-pic.png) |
 
-> Place screenshot images in a `screenshots/` folder at the project root, matching the filenames above (or update the paths to match your own filenames).
 
 ## Getting Started
 
