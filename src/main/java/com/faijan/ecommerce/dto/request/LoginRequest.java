@@ -1,4 +1,4 @@
-package com.faijan.ecommerce.security;
+package com.faijan.ecommerce.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;

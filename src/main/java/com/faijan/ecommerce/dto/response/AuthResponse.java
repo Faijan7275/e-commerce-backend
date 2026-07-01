@@ -1,4 +1,4 @@
-package com.faijan.ecommerce.security;
+package com.faijan.ecommerce.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,9 +1,14 @@
-package com.faijan.ecommerce.security;
+package com.faijan.ecommerce.controller;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.faijan.ecommerce.dto.request.LoginRequest;
+import com.faijan.ecommerce.dto.request.RegisterRequest;
+import com.faijan.ecommerce.dto.response.AuthResponse;
+import com.faijan.ecommerce.service.AuthService;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

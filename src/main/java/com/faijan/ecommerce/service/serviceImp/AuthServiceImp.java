@@ -1,4 +1,4 @@
-package com.faijan.ecommerce.security;
+package com.faijan.ecommerce.service.serviceImp;
 
 import java.time.LocalDateTime;
 
@@ -7,10 +7,15 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.faijan.ecommerce.dto.request.LoginRequest;
+import com.faijan.ecommerce.dto.request.RegisterRequest;
+import com.faijan.ecommerce.dto.response.AuthResponse;
 import com.faijan.ecommerce.entity.Role;
 import com.faijan.ecommerce.entity.User;
 import com.faijan.ecommerce.exception.AlreadyExistException;
 import com.faijan.ecommerce.repository.UserRepository;
+import com.faijan.ecommerce.security.JwtUtil;
+import com.faijan.ecommerce.service.AuthService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -26,7 +31,7 @@ public class AuthServiceImp implements AuthService {
     @Override
     public AuthResponse register(RegisterRequest request) {
 
-        if (userRepository.findByEmail(request.getEmail()).isPresent()) {
+        if (userRepository.findUserByEmail(request.getEmail()).isPresent()) {
             throw new AlreadyExistException("A user with this email already exists.");
         }
 
@@ -59,7 +64,7 @@ public class AuthServiceImp implements AuthService {
                 new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword())
         );
 
-        User user = userRepository.findByEmail(request.getEmail())
+        User user = userRepository.findUserByEmail(request.getEmail())
                 .orElseThrow(() -> new IllegalStateException("User should exist after successful authentication."));
 
         String token = jwtUtil.generateToken(user.getEmail());

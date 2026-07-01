@@ -61,9 +61,7 @@ public class UserServiceImp implements UserService{
 		Optional<User> userWithSameEmail =
 		        repository.findUserByEmail(user.getEmail());
 
-		if (userWithSameEmail.isPresent()
-		        && !userWithSameEmail.get().getId().equals(existingUser.getId())) {
-
+		if (userWithSameEmail.isPresent() && !userWithSameEmail.get().getId().equals(existingUser.getId())) {
 		    throw new AlreadyExistException("Given email already exists.");
 		}
 		
